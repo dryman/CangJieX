@@ -9,12 +9,9 @@
 #import <Cocoa/Cocoa.h>
 #import <InputMethodKit/InputMethodKit.h>
 
-@interface CangJieClassic : IMKInputController{
-    NSDictionary *trie;
-    NSDictionary *hanzi;
+@interface CangJieClassic : IMKInputController {
+    NSMutableString *buffer;
 }
 
-@property (readonly) NSDictionary *trie;
-@property (readonly) NSDictionary *hanzi;
 
 @end

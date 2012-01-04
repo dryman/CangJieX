@@ -11,7 +11,6 @@
 		5D4D5B3714B0B3EE00CB5B21 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B3514B0B3EE00CB5B21 /* InfoPlist.strings */; };
 		5D4D5B3914B0B3EE00CB5B21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D5B3814B0B3EE00CB5B21 /* main.m */; };
 		5D4D5B3D14B0B3EE00CB5B21 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B3B14B0B3EE00CB5B21 /* Credits.rtf */; };
-		5D4D5B4014B0B3EE00CB5B21 /* CangJieXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D5B3F14B0B3EE00CB5B21 /* CangJieXAppDelegate.m */; };
 		5D4D5B4314B0B3EF00CB5B21 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B4114B0B3EF00CB5B21 /* MainMenu.xib */; };
 		5D4D5B4B14B0B3EF00CB5B21 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4D5B4A14B0B3EF00CB5B21 /* SenTestingKit.framework */; };
 		5D4D5B4C14B0B3EF00CB5B21 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4D5B2C14B0B3EE00CB5B21 /* Cocoa.framework */; };
@@ -91,8 +90,6 @@
 		5D4D5B3814B0B3EE00CB5B21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D4D5B3A14B0B3EE00CB5B21 /* CangJieX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CangJieX-Prefix.pch"; sourceTree = "<group>"; };
 		5D4D5B3C14B0B3EE00CB5B21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		5D4D5B3E14B0B3EE00CB5B21 /* CangJieXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CangJieXAppDelegate.h; sourceTree = "<group>"; };
-		5D4D5B3F14B0B3EE00CB5B21 /* CangJieXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CangJieXAppDelegate.m; sourceTree = "<group>"; };
 		5D4D5B4214B0B3EF00CB5B21 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		5D4D5B4914B0B3EF00CB5B21 /* CangJieXTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CangJieXTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4D5B4A14B0B3EF00CB5B21 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -210,8 +207,6 @@
 		5D4D5B3214B0B3EE00CB5B21 /* CangJieX */ = {
 			isa = PBXGroup;
 			children = (
-				5D4D5B3E14B0B3EE00CB5B21 /* CangJieXAppDelegate.h */,
-				5D4D5B3F14B0B3EE00CB5B21 /* CangJieXAppDelegate.m */,
 				5DF0C87414B4340600D6396C /* CangJieClassic.h */,
 				5DF0C87514B4340600D6396C /* CangJieClassic.m */,
 				5D4D5B3814B0B3EE00CB5B21 /* main.m */,
@@ -453,7 +448,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D4D5B3914B0B3EE00CB5B21 /* main.m in Sources */,
-				5D4D5B4014B0B3EE00CB5B21 /* CangJieXAppDelegate.m in Sources */,
 				5DF0C87614B4340600D6396C /* CangJieClassic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -720,6 +714,7 @@
 				5DF0C86414B3FB0300D6396C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

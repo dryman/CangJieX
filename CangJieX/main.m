@@ -9,8 +9,10 @@
 #import <Cocoa/Cocoa.h>
 #import <InputMethodKit/InputMethodKit.h>
 
-const NSString* connectionName=@"AzaleaCangJie_1_Connection";
+const NSString* connectionName=@"AzaleaCangjie_1_Connection";
 IMKServer* server;
+NSDictionary *trie;
+NSDictionary *hanzi;
 
 int main(int argc, char *argv[])
 {
@@ -22,6 +24,9 @@ int main(int argc, char *argv[])
     for (NSConnection* connection in arr){
         NSLog(@"%@",connection);
     }
+    NSString* resource_path=[[NSBundle mainBundle] resourcePath];
+    trie = [NSDictionary dictionaryWithContentsOfFile:[resource_path stringByAppendingPathComponent:@"cangjie_trie.plist"]];
+    hanzi = [NSDictionary dictionaryWithContentsOfFile:[resource_path stringByAppendingPathComponent:@"hanzi.plist"]];
 	
     //load the bundle explicitly because in this case the input method is a background only application 
 	[NSBundle loadNibNamed:@"MainMenu" owner:[NSApplication sharedApplication]];

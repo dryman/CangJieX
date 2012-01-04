@@ -18,6 +18,22 @@
 		5D4D5B5414B0B3EF00CB5B21 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B5214B0B3EF00CB5B21 /* InfoPlist.strings */; };
 		5D4D5B5614B0B3EF00CB5B21 /* CangJieXTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B5514B0B3EF00CB5B21 /* CangJieXTests.h */; };
 		5D4D5B5814B0B3EF00CB5B21 /* CangJieXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D5B5714B0B3EF00CB5B21 /* CangJieXTests.m */; };
+		5D4D5B6814B0B42300CB5B21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4D5B6714B0B42300CB5B21 /* Foundation.framework */; };
+		5D4D5B6B14B0B42300CB5B21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D5B6A14B0B42300CB5B21 /* main.m */; };
+		5D4D5B6F14B0B42300CB5B21 /* BuildHanzi.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5D4D5B6E14B0B42300CB5B21 /* BuildHanzi.1 */; };
+		5D4D5B7514B0B49E00CB5B21 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D5B7414B0B49E00CB5B21 /* DDFileReader.m */; };
+		5D4D5B8114B152F500CB5B21 /* Bopomofo.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B7B14B152F400CB5B21 /* Bopomofo.tiff */; };
+		5D4D5B8214B152F500CB5B21 /* Bopomofo.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B7B14B152F400CB5B21 /* Bopomofo.tiff */; };
+		5D4D5B8314B152F500CB5B21 /* BopomofoSelected.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B7C14B152F400CB5B21 /* BopomofoSelected.tiff */; };
+		5D4D5B8414B152F500CB5B21 /* BopomofoSelected.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B7C14B152F400CB5B21 /* BopomofoSelected.tiff */; };
+		5D4D5B8514B152F500CB5B21 /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B7D14B152F500CB5B21 /* favicon.ico */; };
+		5D4D5B8614B152F500CB5B21 /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B7D14B152F500CB5B21 /* favicon.ico */; };
+		5D4D5B8714B152F500CB5B21 /* favicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B7E14B152F500CB5B21 /* favicon.png */; };
+		5D4D5B8814B152F500CB5B21 /* favicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B7E14B152F500CB5B21 /* favicon.png */; };
+		5D4D5B8914B152F500CB5B21 /* favicon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B7F14B152F500CB5B21 /* favicon.tiff */; };
+		5D4D5B8A14B152F500CB5B21 /* favicon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B7F14B152F500CB5B21 /* favicon.tiff */; };
+		5D4D5B8B14B152F500CB5B21 /* Lettuce.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B8014B152F500CB5B21 /* Lettuce.icns */; };
+		5D4D5B8C14B152F500CB5B21 /* Lettuce.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B8014B152F500CB5B21 /* Lettuce.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,26 +46,54 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5D4D5B6314B0B42300CB5B21 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				5D4D5B6F14B0B42300CB5B21 /* BuildHanzi.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5D4D5B2814B0B3EE00CB5B21 /* CangJieX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CangJieX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4D5B2C14B0B3EE00CB5B21 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5D4D5B2F14B0B3EE00CB5B21 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		5D4D5B3014B0B3EE00CB5B21 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5D4D5B3114B0B3EE00CB5B21 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		5D4D5B3414B0B3EE00CB5B21 /* CangJieX-Info.plist */ = {isa = PBXFileReference; path = "CangJieX-Info.plist"; sourceTree = "<group>"; };
+		5D4D5B3414B0B3EE00CB5B21 /* CangJieX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CangJieX-Info.plist"; sourceTree = "<group>"; };
 		5D4D5B3614B0B3EE00CB5B21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5D4D5B3814B0B3EE00CB5B21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5D4D5B3A14B0B3EE00CB5B21 /* CangJieX-Prefix.pch */ = {isa = PBXFileReference; path = "CangJieX-Prefix.pch"; sourceTree = "<group>"; };
+		5D4D5B3A14B0B3EE00CB5B21 /* CangJieX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CangJieX-Prefix.pch"; sourceTree = "<group>"; };
 		5D4D5B3C14B0B3EE00CB5B21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		5D4D5B3E14B0B3EE00CB5B21 /* CangJieXAppDelegate.h */ = {isa = PBXFileReference; path = CangJieXAppDelegate.h; sourceTree = "<group>"; };
+		5D4D5B3E14B0B3EE00CB5B21 /* CangJieXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CangJieXAppDelegate.h; sourceTree = "<group>"; };
 		5D4D5B3F14B0B3EE00CB5B21 /* CangJieXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CangJieXAppDelegate.m; sourceTree = "<group>"; };
 		5D4D5B4214B0B3EF00CB5B21 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		5D4D5B4914B0B3EF00CB5B21 /* CangJieXTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CangJieXTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4D5B4A14B0B3EF00CB5B21 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		5D4D5B5114B0B3EF00CB5B21 /* CangJieXTests-Info.plist */ = {isa = PBXFileReference; path = "CangJieXTests-Info.plist"; sourceTree = "<group>"; };
+		5D4D5B5114B0B3EF00CB5B21 /* CangJieXTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CangJieXTests-Info.plist"; sourceTree = "<group>"; };
 		5D4D5B5314B0B3EF00CB5B21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5D4D5B5514B0B3EF00CB5B21 /* CangJieXTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CangJieXTests.h; sourceTree = "<group>"; };
 		5D4D5B5714B0B3EF00CB5B21 /* CangJieXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CangJieXTests.m; sourceTree = "<group>"; };
+		5D4D5B6514B0B42300CB5B21 /* BuildHanzi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BuildHanzi; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D4D5B6714B0B42300CB5B21 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5D4D5B6A14B0B42300CB5B21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5D4D5B6D14B0B42300CB5B21 /* BuildHanzi-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BuildHanzi-Prefix.pch"; sourceTree = "<group>"; };
+		5D4D5B6E14B0B42300CB5B21 /* BuildHanzi.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = BuildHanzi.1; sourceTree = "<group>"; };
+		5D4D5B7314B0B49E00CB5B21 /* DDFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDFileReader.h; path = ../../../CangJieX/DDFileReader.h; sourceTree = "<group>"; };
+		5D4D5B7414B0B49E00CB5B21 /* DDFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDFileReader.m; path = ../../../CangJieX/DDFileReader.m; sourceTree = "<group>"; };
+		5D4D5B7914B0B63A00CB5B21 /* cangjie.cin */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cangjie.cin; sourceTree = "<group>"; };
+		5D4D5B7A14B0B66200CB5B21 /* zhuyin.cin */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zhuyin.cin; sourceTree = "<group>"; };
+		5D4D5B7B14B152F400CB5B21 /* Bopomofo.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Bopomofo.tiff; sourceTree = "<group>"; };
+		5D4D5B7C14B152F400CB5B21 /* BopomofoSelected.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = BopomofoSelected.tiff; sourceTree = "<group>"; };
+		5D4D5B7D14B152F500CB5B21 /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
+		5D4D5B7E14B152F500CB5B21 /* favicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favicon.png; sourceTree = "<group>"; };
+		5D4D5B7F14B152F500CB5B21 /* favicon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = favicon.tiff; sourceTree = "<group>"; };
+		5D4D5B8014B152F500CB5B21 /* Lettuce.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Lettuce.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +114,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5D4D5B6214B0B42300CB5B21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D4D5B6814B0B42300CB5B21 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +130,7 @@
 			children = (
 				5D4D5B3214B0B3EE00CB5B21 /* CangJieX */,
 				5D4D5B4F14B0B3EF00CB5B21 /* CangJieXTests */,
+				5D4D5B6914B0B42300CB5B21 /* BuildHanzi */,
 				5D4D5B2B14B0B3EE00CB5B21 /* Frameworks */,
 				5D4D5B2914B0B3EE00CB5B21 /* Products */,
 			);
@@ -88,6 +141,7 @@
 			children = (
 				5D4D5B2814B0B3EE00CB5B21 /* CangJieX.app */,
 				5D4D5B4914B0B3EF00CB5B21 /* CangJieXTests.octest */,
+				5D4D5B6514B0B42300CB5B21 /* BuildHanzi */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +151,7 @@
 			children = (
 				5D4D5B2C14B0B3EE00CB5B21 /* Cocoa.framework */,
 				5D4D5B4A14B0B3EF00CB5B21 /* SenTestingKit.framework */,
+				5D4D5B6714B0B42300CB5B21 /* Foundation.framework */,
 				5D4D5B2E14B0B3EE00CB5B21 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -126,6 +181,12 @@
 		5D4D5B3314B0B3EE00CB5B21 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5D4D5B7B14B152F400CB5B21 /* Bopomofo.tiff */,
+				5D4D5B7C14B152F400CB5B21 /* BopomofoSelected.tiff */,
+				5D4D5B7D14B152F500CB5B21 /* favicon.ico */,
+				5D4D5B7E14B152F500CB5B21 /* favicon.png */,
+				5D4D5B7F14B152F500CB5B21 /* favicon.tiff */,
+				5D4D5B8014B152F500CB5B21 /* Lettuce.icns */,
 				5D4D5B3414B0B3EE00CB5B21 /* CangJieX-Info.plist */,
 				5D4D5B3514B0B3EE00CB5B21 /* InfoPlist.strings */,
 				5D4D5B3814B0B3EE00CB5B21 /* main.m */,
@@ -150,6 +211,28 @@
 			children = (
 				5D4D5B5114B0B3EF00CB5B21 /* CangJieXTests-Info.plist */,
 				5D4D5B5214B0B3EF00CB5B21 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5D4D5B6914B0B42300CB5B21 /* BuildHanzi */ = {
+			isa = PBXGroup;
+			children = (
+				5D4D5B7A14B0B66200CB5B21 /* zhuyin.cin */,
+				5D4D5B7914B0B63A00CB5B21 /* cangjie.cin */,
+				5D4D5B7314B0B49E00CB5B21 /* DDFileReader.h */,
+				5D4D5B7414B0B49E00CB5B21 /* DDFileReader.m */,
+				5D4D5B6A14B0B42300CB5B21 /* main.m */,
+				5D4D5B6E14B0B42300CB5B21 /* BuildHanzi.1 */,
+				5D4D5B6C14B0B42300CB5B21 /* Supporting Files */,
+			);
+			path = BuildHanzi;
+			sourceTree = "<group>";
+		};
+		5D4D5B6C14B0B42300CB5B21 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5D4D5B6D14B0B42300CB5B21 /* BuildHanzi-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -193,6 +276,23 @@
 			productReference = 5D4D5B4914B0B3EF00CB5B21 /* CangJieXTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		5D4D5B6414B0B42300CB5B21 /* BuildHanzi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D4D5B7014B0B42300CB5B21 /* Build configuration list for PBXNativeTarget "BuildHanzi" */;
+			buildPhases = (
+				5D4D5B6114B0B42300CB5B21 /* Sources */,
+				5D4D5B6214B0B42300CB5B21 /* Frameworks */,
+				5D4D5B6314B0B42300CB5B21 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BuildHanzi;
+			productName = BuildHanzi;
+			productReference = 5D4D5B6514B0B42300CB5B21 /* BuildHanzi */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -212,6 +312,7 @@
 			targets = (
 				5D4D5B2714B0B3EE00CB5B21 /* CangJieX */,
 				5D4D5B4814B0B3EF00CB5B21 /* CangJieXTests */,
+				5D4D5B6414B0B42300CB5B21 /* BuildHanzi */,
 			);
 		};
 /* End PBXProject section */
@@ -224,6 +325,12 @@
 				5D4D5B3714B0B3EE00CB5B21 /* InfoPlist.strings in Resources */,
 				5D4D5B3D14B0B3EE00CB5B21 /* Credits.rtf in Resources */,
 				5D4D5B4314B0B3EF00CB5B21 /* MainMenu.xib in Resources */,
+				5D4D5B8114B152F500CB5B21 /* Bopomofo.tiff in Resources */,
+				5D4D5B8314B152F500CB5B21 /* BopomofoSelected.tiff in Resources */,
+				5D4D5B8514B152F500CB5B21 /* favicon.ico in Resources */,
+				5D4D5B8714B152F500CB5B21 /* favicon.png in Resources */,
+				5D4D5B8914B152F500CB5B21 /* favicon.tiff in Resources */,
+				5D4D5B8B14B152F500CB5B21 /* Lettuce.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +340,12 @@
 			files = (
 				5D4D5B5414B0B3EF00CB5B21 /* InfoPlist.strings in Resources */,
 				5D4D5B5614B0B3EF00CB5B21 /* CangJieXTests.h in Resources */,
+				5D4D5B8214B152F500CB5B21 /* Bopomofo.tiff in Resources */,
+				5D4D5B8414B152F500CB5B21 /* BopomofoSelected.tiff in Resources */,
+				5D4D5B8614B152F500CB5B21 /* favicon.ico in Resources */,
+				5D4D5B8814B152F500CB5B21 /* favicon.png in Resources */,
+				5D4D5B8A14B152F500CB5B21 /* favicon.tiff in Resources */,
+				5D4D5B8C14B152F500CB5B21 /* Lettuce.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +382,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D4D5B5814B0B3EF00CB5B21 /* CangJieXTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D4D5B6114B0B42300CB5B21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D4D5B6B14B0B42300CB5B21 /* main.m in Sources */,
+				5D4D5B7514B0B49E00CB5B21 /* DDFileReader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +535,29 @@
 			};
 			name = Release;
 		};
+		5D4D5B7114B0B42300CB5B21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BuildHanzi/BuildHanzi-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"SRC_ROOT=\"$(SRCROOT)\"",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5D4D5B7214B0B42300CB5B21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BuildHanzi/BuildHanzi-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -438,6 +583,14 @@
 			buildConfigurations = (
 				5D4D5B5F14B0B3EF00CB5B21 /* Debug */,
 				5D4D5B6014B0B3EF00CB5B21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5D4D5B7014B0B42300CB5B21 /* Build configuration list for PBXNativeTarget "BuildHanzi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D4D5B7114B0B42300CB5B21 /* Debug */,
+				5D4D5B7214B0B42300CB5B21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

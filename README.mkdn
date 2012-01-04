@@ -1,0 +1,6 @@
+# NAME
+CangJieX: yet anothor cangjie input method for osx
+
+# DESCRIPTION
+
+TODO

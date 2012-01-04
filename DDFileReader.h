@@ -26,7 +26,7 @@
 - (id) initWithFilePath:(NSString *)aPath;
 
 - (NSString *) readLine;
-- (NSString *) readChompedLine;
+- (NSString *) readChompedLine:(NSUInteger)endChar;
 - (NSString *) readTrimmedLine;
 
 #if NS_BLOCKS_AVAILABLE

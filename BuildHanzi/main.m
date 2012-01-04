@@ -28,14 +28,14 @@ int main (int argc, const char * argv[])
     
     NSString *current_path = @""
         MACRO_VALUE_TO_STRING(SRC_ROOT)
-        "/BuildHanzi";
+        "/data";
     NSLog(@"path is %@",current_path);
     
     // Read cangjie.cin
     NSString *cj5path = [current_path stringByAppendingPathComponent:@"cangjie.cin"];
     DDFileReader *reader = [[DDFileReader alloc] initWithFilePath:cj5path];
     NSString *line;
-    while ((line = [reader readChompedLine])){
+    while ((line = [reader readChompedLine:1])){
         if ([[line substringToIndex:1] isEqualToString:@"%"] ||
             [[line substringToIndex:1] isEqualToString:@"#"]){ // skip lines with prefix % and #
             continue;
@@ -49,12 +49,10 @@ int main (int argc, const char * argv[])
     // Read zhuyin.cin
     NSString* zhypath = [current_path stringByAppendingPathComponent:@"zhuyin.cin"];
     reader = [[DDFileReader alloc] initWithFilePath:zhypath];
-    NSString* l;
-    while ((l = [reader readLine])){
-        if ([[l substringToIndex:1] isEqualToString:@"%"] ||
-            [[l substringToIndex:1] isEqualToString:@"#"]){continue;}
+    while ((line = [reader readChompedLine:2])){
+        if ([[line substringToIndex:1] isEqualToString:@"%"] ||
+            [[line substringToIndex:1] isEqualToString:@"#"]){continue;}
         
-        line =[l substringToIndex: [l length]-2];
         NSArray *pair = [line componentsSeparatedByString:@" "];
         [zhy_def addObject:[pair objectAtIndex:0]];
         [zhy_char addObject:[pair objectAtIndex:1]]; // retain count is UINT_MAX
@@ -93,9 +91,8 @@ int main (int argc, const char * argv[])
     NSData *dataRep = [NSPropertyListSerialization dataFromPropertyList:hanziDict 
                                                                  format:NSPropertyListBinaryFormat_v1_0
                                                        errorDescription:&err];
-    if (!dataRep)
-        NSLog(@"%@",err);
-    [dataRep writeToFile:[current_path stringByAppendingPathComponent:@"hanzi.plist"] atomically:NO];
+    if (!dataRep) NSLog(@"%@",err);
+    [dataRep writeToFile:[current_path stringByAppendingPathComponent:@"hanzi.plist"] atomically:YES];
     
     [pool drain];
     return 0;

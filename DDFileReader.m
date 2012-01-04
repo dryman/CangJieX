@@ -108,9 +108,9 @@
     return [[self readLine] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
-- (NSString *) readChompedLine {
+- (NSString *) readChompedLine:(NSUInteger)endChar {
     NSString *string = [self readLine];
-    return [string substringToIndex: [string length]-1];
+    return [string substringToIndex: [string length]-endChar];
 }
 
 #if NS_BLOCKS_AVAILABLE

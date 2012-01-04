@@ -21,7 +21,6 @@
 		5D4D5B6814B0B42300CB5B21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4D5B6714B0B42300CB5B21 /* Foundation.framework */; };
 		5D4D5B6B14B0B42300CB5B21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D5B6A14B0B42300CB5B21 /* main.m */; };
 		5D4D5B6F14B0B42300CB5B21 /* BuildHanzi.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5D4D5B6E14B0B42300CB5B21 /* BuildHanzi.1 */; };
-		5D4D5B7514B0B49E00CB5B21 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D5B7414B0B49E00CB5B21 /* DDFileReader.m */; };
 		5D4D5B8114B152F500CB5B21 /* Bopomofo.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B7B14B152F400CB5B21 /* Bopomofo.tiff */; };
 		5D4D5B8214B152F500CB5B21 /* Bopomofo.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B7B14B152F400CB5B21 /* Bopomofo.tiff */; };
 		5D4D5B8314B152F500CB5B21 /* BopomofoSelected.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B7C14B152F400CB5B21 /* BopomofoSelected.tiff */; };
@@ -34,6 +33,7 @@
 		5D4D5B8A14B152F500CB5B21 /* favicon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B7F14B152F500CB5B21 /* favicon.tiff */; };
 		5D4D5B8B14B152F500CB5B21 /* Lettuce.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B8014B152F500CB5B21 /* Lettuce.icns */; };
 		5D4D5B8C14B152F500CB5B21 /* Lettuce.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B8014B152F500CB5B21 /* Lettuce.icns */; };
+		5DECB27314B3F9DC00CE1A27 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DECB27214B3F9DC00CE1A27 /* DDFileReader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,8 +84,6 @@
 		5D4D5B6A14B0B42300CB5B21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D4D5B6D14B0B42300CB5B21 /* BuildHanzi-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BuildHanzi-Prefix.pch"; sourceTree = "<group>"; };
 		5D4D5B6E14B0B42300CB5B21 /* BuildHanzi.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = BuildHanzi.1; sourceTree = "<group>"; };
-		5D4D5B7314B0B49E00CB5B21 /* DDFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDFileReader.h; path = ../../../CangJieX/DDFileReader.h; sourceTree = "<group>"; };
-		5D4D5B7414B0B49E00CB5B21 /* DDFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDFileReader.m; path = ../../../CangJieX/DDFileReader.m; sourceTree = "<group>"; };
 		5D4D5B7914B0B63A00CB5B21 /* cangjie.cin */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cangjie.cin; sourceTree = "<group>"; };
 		5D4D5B7A14B0B66200CB5B21 /* zhuyin.cin */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zhuyin.cin; sourceTree = "<group>"; };
 		5D4D5B7B14B152F400CB5B21 /* Bopomofo.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Bopomofo.tiff; sourceTree = "<group>"; };
@@ -94,6 +92,8 @@
 		5D4D5B7E14B152F500CB5B21 /* favicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favicon.png; sourceTree = "<group>"; };
 		5D4D5B7F14B152F500CB5B21 /* favicon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = favicon.tiff; sourceTree = "<group>"; };
 		5D4D5B8014B152F500CB5B21 /* Lettuce.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Lettuce.icns; sourceTree = "<group>"; };
+		5DECB27114B3F9DC00CE1A27 /* DDFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDFileReader.h; path = ../DDFileReader.h; sourceTree = "<group>"; };
+		5DECB27214B3F9DC00CE1A27 /* DDFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDFileReader.m; path = ../DDFileReader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,10 +218,10 @@
 		5D4D5B6914B0B42300CB5B21 /* BuildHanzi */ = {
 			isa = PBXGroup;
 			children = (
+				5DECB27114B3F9DC00CE1A27 /* DDFileReader.h */,
+				5DECB27214B3F9DC00CE1A27 /* DDFileReader.m */,
 				5D4D5B7A14B0B66200CB5B21 /* zhuyin.cin */,
 				5D4D5B7914B0B63A00CB5B21 /* cangjie.cin */,
-				5D4D5B7314B0B49E00CB5B21 /* DDFileReader.h */,
-				5D4D5B7414B0B49E00CB5B21 /* DDFileReader.m */,
 				5D4D5B6A14B0B42300CB5B21 /* main.m */,
 				5D4D5B6E14B0B42300CB5B21 /* BuildHanzi.1 */,
 				5D4D5B6C14B0B42300CB5B21 /* Supporting Files */,
@@ -390,7 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D4D5B6B14B0B42300CB5B21 /* main.m in Sources */,
-				5D4D5B7514B0B49E00CB5B21 /* DDFileReader.m in Sources */,
+				5DECB27314B3F9DC00CE1A27 /* DDFileReader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +577,7 @@
 				5D4D5B5D14B0B3EF00CB5B21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D4D5B5E14B0B3EF00CB5B21 /* Build configuration list for PBXNativeTarget "CangJieXTests" */ = {
 			isa = XCConfigurationList;
@@ -585,6 +586,7 @@
 				5D4D5B6014B0B3EF00CB5B21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D4D5B7014B0B42300CB5B21 /* Build configuration list for PBXNativeTarget "BuildHanzi" */ = {
 			isa = XCConfigurationList;
@@ -593,6 +595,7 @@
 				5D4D5B7214B0B42300CB5B21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

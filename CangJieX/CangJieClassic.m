@@ -9,6 +9,7 @@
 #import "CangJieClassic.h"
 
 extern NSDictionary* trie;
+extern NSDictionary* keyname;
 
 @implementation CangJieClassic
 
@@ -17,10 +18,10 @@ extern NSDictionary* trie;
 {
     self = [super initWithServer:server delegate:delegate client:inputClient];
     if (self) {
-        buffer = [[NSMutableString alloc]init];
+        _originalBuffer = [[NSMutableString alloc] init];
+        _composedBuffer = [[NSMutableString alloc] init];
         NSLog(@"init success!");
     }
-    
     return self;
 }
 
@@ -29,25 +30,32 @@ extern NSDictionary* trie;
 {
     NSLog(@"string is %@",string);
     
+    // Need to deal when string is not in set of key_name
     if ([string isEqualToString:@" "]) {
         [self commitComposition:sender];
         return YES;
     }
-    if ([buffer length]>=5) 
+    if ([_originalBuffer length]>=5) 
         return YES;
 
-    [buffer appendString:string];
-    [sender setMarkedText:buffer selectionRange:NSMakeRange(0, [buffer length]) replacementRange:NSMakeRange(NSNotFound, NSNotFound)];
+    [_originalBuffer appendString:string];
+    [_composedBuffer appendString:[keyname objectForKey:string]];
+    [sender setMarkedText:_composedBuffer 
+           selectionRange:NSMakeRange(0, [_originalBuffer length]) 
+         replacementRange:NSMakeRange(NSNotFound, NSNotFound)];
     return YES;
 }
 
 - (BOOL) didCommandBySelector:(SEL)aSelector client:(id)sender
 {
     if ([NSStringFromSelector(aSelector) isEqualToString:@"deleteBackward:"]
-        && [buffer length]>0) {
-        [buffer deleteCharactersInRange:NSMakeRange([buffer length]-1, 1)];
-        [sender setMarkedText:buffer selectionRange:NSMakeRange(0, [buffer length]) replacementRange:NSMakeRange(NSNotFound, NSNotFound)];
-        // setup setMarkedText and candidate
+        && [_originalBuffer length]>0) {
+        [_originalBuffer deleteCharactersInRange:NSMakeRange([_originalBuffer length]-1, 1)];
+        [_composedBuffer deleteCharactersInRange:NSMakeRange([_composedBuffer length]-1, 1)];
+        [sender setMarkedText:_composedBuffer 
+               selectionRange:NSMakeRange(0, [_originalBuffer length]) 
+             replacementRange:NSMakeRange(NSNotFound, NSNotFound)];        
+        // setup candidate
         return YES;
     }
     [sender performSelector:aSelector];
@@ -57,9 +65,10 @@ extern NSDictionary* trie;
 
 - (void) commitComposition:(id)sender
 {
-    NSString *exact = [[[trie objectForKey:buffer] objectForKey:@"exact"] objectAtIndex:0];
+    NSString *exact = [[[trie objectForKey:_originalBuffer] objectForKey:@"exact"] objectAtIndex:0];
     [sender insertText:exact replacementRange:NSMakeRange(NSNotFound, NSNotFound)];
-    [buffer deleteCharactersInRange:NSMakeRange(0, [buffer length])];
+    [_originalBuffer deleteCharactersInRange:NSMakeRange(0, [_originalBuffer length])];
+    [_composedBuffer deleteCharactersInRange:NSMakeRange(0, [_composedBuffer length])];
 }
 
 @end

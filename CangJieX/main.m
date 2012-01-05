@@ -13,6 +13,7 @@ const NSString* connectionName=@"AzaleaCangjie_1_Connection";
 IMKServer* server;
 NSDictionary *trie;
 NSDictionary *hanzi;
+NSDictionary *keyname;
 
 int main(int argc, char *argv[])
 {
@@ -27,6 +28,7 @@ int main(int argc, char *argv[])
     NSString* resource_path=[[NSBundle mainBundle] resourcePath];
     trie = [[NSDictionary alloc] initWithContentsOfFile:[resource_path stringByAppendingPathComponent:@"cangjie_trie.plist"]];
     hanzi = [[NSDictionary alloc] initWithContentsOfFile:[resource_path stringByAppendingPathComponent:@"hanzi.plist"]];
+    keyname = [[NSDictionary alloc] initWithContentsOfFile:[resource_path stringByAppendingPathComponent:@"cangjie_keyname.plist"]];
 	
     //load the bundle explicitly because in this case the input method is a background only application 
 	[NSBundle loadNibNamed:@"MainMenu" owner:[NSApplication sharedApplication]];
@@ -37,5 +39,6 @@ int main(int argc, char *argv[])
     
 	[trie release];
     [hanzi release];
+    [keyname release];
     [pool drain];
 }

@@ -10,7 +10,8 @@
 #import <InputMethodKit/InputMethodKit.h>
 
 @interface CangJieClassic : IMKInputController {
-    NSMutableString *buffer;
+    NSMutableString *_originalBuffer;
+    NSMutableString *_composedBuffer;
 }
 
 

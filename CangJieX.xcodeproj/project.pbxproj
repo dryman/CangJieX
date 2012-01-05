@@ -31,6 +31,8 @@
 		5D4D5B8A14B152F500CB5B21 /* favicon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B7F14B152F500CB5B21 /* favicon.tiff */; };
 		5D4D5B8B14B152F500CB5B21 /* Lettuce.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B8014B152F500CB5B21 /* Lettuce.icns */; };
 		5D4D5B8C14B152F500CB5B21 /* Lettuce.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B8014B152F500CB5B21 /* Lettuce.icns */; };
+		5D92787F14B5EB90009C16E6 /* cangjie_keyname.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D92787E14B5EB90009C16E6 /* cangjie_keyname.plist */; };
+		5D92788014B5EB90009C16E6 /* cangjie_keyname.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D92787E14B5EB90009C16E6 /* cangjie_keyname.plist */; };
 		5DECB27314B3F9DC00CE1A27 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DECB27214B3F9DC00CE1A27 /* DDFileReader.m */; };
 		5DF0C85B14B3FB0300D6396C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4D5B6714B0B42300CB5B21 /* Foundation.framework */; };
 		5DF0C85E14B3FB0300D6396C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF0C85D14B3FB0300D6396C /* main.m */; };
@@ -107,6 +109,7 @@
 		5D4D5B7E14B152F500CB5B21 /* favicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favicon.png; sourceTree = "<group>"; };
 		5D4D5B7F14B152F500CB5B21 /* favicon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = favicon.tiff; sourceTree = "<group>"; };
 		5D4D5B8014B152F500CB5B21 /* Lettuce.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Lettuce.icns; sourceTree = "<group>"; };
+		5D92787E14B5EB90009C16E6 /* cangjie_keyname.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = cangjie_keyname.plist; sourceTree = "<group>"; };
 		5DECB27114B3F9DC00CE1A27 /* DDFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDFileReader.h; path = ../DDFileReader.h; sourceTree = "<group>"; };
 		5DECB27214B3F9DC00CE1A27 /* DDFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDFileReader.m; path = ../DDFileReader.m; sourceTree = "<group>"; };
 		5DF0C85914B3FB0300D6396C /* BuildCangJieTrie */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BuildCangJieTrie; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,6 +223,7 @@
 		5D4D5B3314B0B3EE00CB5B21 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5D92787E14B5EB90009C16E6 /* cangjie_keyname.plist */,
 				5DF0C86814B4118400D6396C /* cangjie_trie.plist */,
 				5DF0C86914B4118400D6396C /* hanzi.plist */,
 				5D4D5B7B14B152F400CB5B21 /* Bopomofo.tiff */,
@@ -405,6 +409,7 @@
 				5D4D5B8B14B152F500CB5B21 /* Lettuce.icns in Resources */,
 				5DF0C86A14B4118400D6396C /* cangjie_trie.plist in Resources */,
 				5DF0C86C14B4118400D6396C /* hanzi.plist in Resources */,
+				5D92787F14B5EB90009C16E6 /* cangjie_keyname.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +426,7 @@
 				5D4D5B8C14B152F500CB5B21 /* Lettuce.icns in Resources */,
 				5DF0C86B14B4118400D6396C /* cangjie_trie.plist in Resources */,
 				5DF0C86D14B4118400D6396C /* hanzi.plist in Resources */,
+				5D92788014B5EB90009C16E6 /* cangjie_keyname.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

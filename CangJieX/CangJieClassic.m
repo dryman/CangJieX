@@ -8,6 +8,7 @@
 
 #import "CangJieClassic.h"
 
+extern NSDictionary* trie;
 
 @implementation CangJieClassic
 
@@ -27,35 +28,29 @@
 - (BOOL) inputText:(NSString *)string client:(id)sender
 {
     NSLog(@"string is %@",string);
-    if (!buffer)
-        NSLog(@"didn't get buffer!");
-    else {
-        NSLog(@"we have buffer");
-        NSLog(@"%@",buffer);
-        [buffer appendString:string];
+    
+    if ([string isEqualToString:@" "]) {
+        [self commitComposition:sender];
+        return YES;
     }
-        //buffer = [[NSMutableString alloc] initWithCapacity:6];
-    //NSLog(@"retain count of buffer is %@",[buffer retainCount]);
-
-    /*if ([buffer length]>=5) 
-        return NO;
-    // if ([string isEqualToString:@" "]) [self commitComposition:sender];
+    if ([buffer length]>=5) 
+        return YES;
 
     [buffer appendString:string];
-     
-    [sender setMarkedText:string selectedRange:NSMakeRange([buffer length], 0) replacementRange:NSMakeRange(NSNotFound, NSNotFound)];
-     */
+    [sender setMarkedText:buffer selectionRange:NSMakeRange(0, [buffer length]) replacementRange:NSMakeRange(NSNotFound, NSNotFound)];
     return YES;
 }
-/*
+
 - (BOOL) didCommandBySelector:(SEL)aSelector client:(id)sender
 {
     if ([NSStringFromSelector(aSelector) isEqualToString:@"deleteBackward:"]
-        && [buffer length]>1) {
+        && [buffer length]>0) {
         [buffer deleteCharactersInRange:NSMakeRange([buffer length]-1, 1)];
+        [sender setMarkedText:buffer selectionRange:NSMakeRange(0, [buffer length]) replacementRange:NSMakeRange(NSNotFound, NSNotFound)];
         // setup setMarkedText and candidate
         return YES;
     }
+    [sender performSelector:aSelector];
     return NO;
 }
 
@@ -64,6 +59,7 @@
 {
     NSString *exact = [[[trie objectForKey:buffer] objectForKey:@"exact"] objectAtIndex:0];
     [sender insertText:exact replacementRange:NSMakeRange(NSNotFound, NSNotFound)];
+    [buffer deleteCharactersInRange:NSMakeRange(0, [buffer length])];
 }
-*/
+
 @end

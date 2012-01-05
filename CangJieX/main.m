@@ -25,14 +25,17 @@ int main(int argc, char *argv[])
         NSLog(@"%@",connection);
     }
     NSString* resource_path=[[NSBundle mainBundle] resourcePath];
-    trie = [NSDictionary dictionaryWithContentsOfFile:[resource_path stringByAppendingPathComponent:@"cangjie_trie.plist"]];
-    hanzi = [NSDictionary dictionaryWithContentsOfFile:[resource_path stringByAppendingPathComponent:@"hanzi.plist"]];
+    trie = [[NSDictionary alloc] initWithContentsOfFile:[resource_path stringByAppendingPathComponent:@"cangjie_trie.plist"]];
+    hanzi = [[NSDictionary alloc] initWithContentsOfFile:[resource_path stringByAppendingPathComponent:@"hanzi.plist"]];
 	
     //load the bundle explicitly because in this case the input method is a background only application 
 	[NSBundle loadNibNamed:@"MainMenu" owner:[NSApplication sharedApplication]];
 	
 	//finally run everything
 	[[NSApplication sharedApplication] run];
-	
-    [pool release];
+    
+    
+	[trie release];
+    [hanzi release];
+    [pool drain];
 }

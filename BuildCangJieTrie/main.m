@@ -16,6 +16,8 @@ int main (int argc, const char * argv[])
 
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
     NSLog(@"start init");
+    NSMutableArray *cj5_key = [NSMutableArray arrayWithCapacity:30];
+    NSMutableArray *cj5_keyname = [NSMutableArray arrayWithCapacity:30];
     NSMutableArray *cj5_def = [NSMutableArray arrayWithCapacity:70000];
     NSMutableArray *cj5_char = [NSMutableArray arrayWithCapacity:70000];
     
@@ -27,6 +29,19 @@ int main (int argc, const char * argv[])
     NSString *line;
     DDFileReader *reader = [[DDFileReader alloc] initWithFilePath:
                             [data_path stringByAppendingPathComponent:@"cangjie.cin"]];
+    // Read keycode
+    while ((line = [reader readChompedLine:1])) {
+        NSLog(@"%@",line);
+        if ([line isEqualToString:@"\%keyname begin"]) break;
+    }
+    while ((line = [reader readChompedLine:1])){
+        NSLog(@"%@",line);
+        if ([line isEqualToString:@"\%keyname end"]) break;
+        NSArray *pair = [line componentsSeparatedByString:@" "];
+        [cj5_key addObject:[pair objectAtIndex:0]];
+        [cj5_keyname addObject:[pair objectAtIndex:1]];
+    }
+    // Read char def
     while ((line = [reader readChompedLine:1])){
         if ([[line substringToIndex:1] isEqualToString:@"%"] ||
             [[line substringToIndex:1] isEqualToString:@"#"]){ // skip lines with prefix % and #
@@ -35,9 +50,10 @@ int main (int argc, const char * argv[])
         NSArray *pair = [line componentsSeparatedByString:@" "];
         [cj5_def addObject:[pair objectAtIndex:0]];
         [cj5_char addObject:[pair objectAtIndex:1]];
-        
     }
     [reader release];
+    
+    NSDictionary *keyname_dict = [NSDictionary dictionaryWithObjects:cj5_keyname forKeys:cj5_key];
     
     NSMutableArray *trie_attrs = [NSMutableArray arrayWithCapacity:70000];
     for (NSString *def in cj5_def){
@@ -86,11 +102,17 @@ int main (int argc, const char * argv[])
     }
     NSLog(@"trie configured");
     NSString *err=Nil;
-    NSData *dataRep = [NSPropertyListSerialization dataFromPropertyList:trie
+    NSData *trieData = [NSPropertyListSerialization dataFromPropertyList:trie
                                                                  format:NSPropertyListBinaryFormat_v1_0
                                                        errorDescription:&err];
-    if (!dataRep) NSLog(@"%@",err);
-    [dataRep writeToFile:[data_path stringByAppendingPathComponent:@"cangjie_trie.plist"] atomically:YES];
+    if (!trieData) NSLog(@"%@",err);
+    [trieData writeToFile:[data_path stringByAppendingPathComponent:@"cangjie_trie.plist"] atomically:YES];
+    
+    NSData *keynameData = [NSPropertyListSerialization dataFromPropertyList:keyname_dict
+                                                                  format:NSPropertyListBinaryFormat_v1_0
+                                                        errorDescription:&err];
+    if (!keynameData) NSLog(@"%@",err);
+    [keynameData writeToFile:[data_path stringByAppendingPathComponent:@"cangjie_keyname.plist"] atomically:YES];
     
 
     [pool drain];

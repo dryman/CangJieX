@@ -33,8 +33,13 @@ int main (int argc, const char * argv[])
     
     // Read cangjie.cin
     NSString *cj5path = [current_path stringByAppendingPathComponent:@"cangjie.cin"];
-    DDFileReader *reader = [[DDFileReader alloc] initWithFilePath:cj5path];
     NSString *line;
+    DDFileReader *reader = [[DDFileReader alloc] initWithFilePath:cj5path];
+
+    while ((line= [reader readChompedLine:1])){
+        NSLog(@"%@",line);
+        if ([line isEqualToString:@"\%keyname end"]) break;
+    }
     while ((line = [reader readChompedLine:1])){
         if ([[line substringToIndex:1] isEqualToString:@"%"] ||
             [[line substringToIndex:1] isEqualToString:@"#"]){ // skip lines with prefix % and #
@@ -47,8 +52,13 @@ int main (int argc, const char * argv[])
     }
     [reader release];
     // Read zhuyin.cin
+
     NSString* zhypath = [current_path stringByAppendingPathComponent:@"zhuyin.cin"];
     reader = [[DDFileReader alloc] initWithFilePath:zhypath];
+    while ((line= [reader readChompedLine:2])){
+        NSLog(@"%@",line);
+        if ([line isEqualToString:@"\%keyname end"]) break;
+    }
     while ((line = [reader readChompedLine:2])){
         if ([[line substringToIndex:1] isEqualToString:@"%"] ||
             [[line substringToIndex:1] isEqualToString:@"#"]){continue;}

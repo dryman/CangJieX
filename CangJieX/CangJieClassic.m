@@ -66,9 +66,11 @@ extern NSDictionary* keyname;
 - (void) commitComposition:(id)sender
 {
     NSString *exact = [[[trie objectForKey:_originalBuffer] objectForKey:@"exact"] objectAtIndex:0];
-    [sender insertText:exact replacementRange:NSMakeRange(NSNotFound, NSNotFound)];
-    [_originalBuffer deleteCharactersInRange:NSMakeRange(0, [_originalBuffer length])];
-    [_composedBuffer deleteCharactersInRange:NSMakeRange(0, [_composedBuffer length])];
+    if (exact) {
+        [sender insertText:exact replacementRange:NSMakeRange(NSNotFound, NSNotFound)];
+        [_originalBuffer deleteCharactersInRange:NSMakeRange(0, [_originalBuffer length])];
+        [_composedBuffer deleteCharactersInRange:NSMakeRange(0, [_composedBuffer length])];
+    }
 }
 
 @end

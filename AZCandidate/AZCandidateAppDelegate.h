@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "AZCandidateWindow.h"
 
 @interface AZCandidateAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindow *window;

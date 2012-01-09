@@ -11,6 +11,7 @@
 
 @interface AZCandidateAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindow *window;
+    // May change NSWindow to AZCandidateWindow, then no need of NSWindow in MainMenu in xib file
 }
 
 @property (assign) IBOutlet NSWindow *window;

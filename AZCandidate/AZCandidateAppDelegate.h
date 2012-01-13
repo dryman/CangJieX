@@ -10,10 +10,13 @@
 #import "AZCandidateWindow.h"
 
 @interface AZCandidateAppDelegate : NSObject <NSApplicationDelegate> {
-    NSWindow *window;
+    // AZCandidateWindow *window;
     // May change NSWindow to AZCandidateWindow, then no need of NSWindow in MainMenu in xib file
+    //NSTableView *table_view;
+    NSWindow *window;
 }
-
+//@property (assign) IBOutlet NSTableView *table_view;
 @property (assign) IBOutlet NSWindow *window;
+
 
 @end

@@ -11,9 +11,11 @@
 @implementation AZCandidateWindow
 
 -(void) awakeFromNib {
-    [self setBackgroundColor:[NSColor clearColor]];
+    
+    //[self setBackgroundColor:[NSColor clearColor]];
     [self setAlphaValue:0.99];
     [self setOpaque:NO];
+    
 }
 
 - (id) initWithContentRect:(NSRect)contentRect 
@@ -27,5 +29,12 @@
                                 defer:flag];
     return self;
 }
+/*
+-(void) displayIfNeeded {
+    NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect: [[self contentView] bounds]
+                                                         xRadius:5 yRadius:5];
+    NSLog(@"display if needed, path = %@", path);
+}
+ */
 
 @end

@@ -56,6 +56,7 @@ extern NSDictionary* keyname;
                selectionRange:NSMakeRange(0, [_originalBuffer length]) 
              replacementRange:NSMakeRange(NSNotFound, NSNotFound)];        
         // setup candidate
+        NSLog(@"deleteingBackward, _originalBuffer is %@",_originalBuffer);
         return YES;
     }
     [sender performSelector:aSelector];
@@ -70,6 +71,9 @@ extern NSDictionary* keyname;
         [sender insertText:exact replacementRange:NSMakeRange(NSNotFound, NSNotFound)];
         [_originalBuffer deleteCharactersInRange:NSMakeRange(0, [_originalBuffer length])];
         [_composedBuffer deleteCharactersInRange:NSMakeRange(0, [_composedBuffer length])];
+    }
+    else {
+        NSLog(@"composition does not match, the _originalBuffer is %@",_originalBuffer);
     }
 }
 

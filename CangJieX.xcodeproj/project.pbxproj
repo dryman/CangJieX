@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D15878914C184F700C2F50F /* cangjie_keyname.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D15878614C184F700C2F50F /* cangjie_keyname.plist */; };
+		5D15878A14C184F700C2F50F /* cangjie_keyname.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D15878614C184F700C2F50F /* cangjie_keyname.plist */; };
+		5D15878B14C184F700C2F50F /* cangjie_keyname.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D15878614C184F700C2F50F /* cangjie_keyname.plist */; };
+		5D15878C14C184F700C2F50F /* cangjie_trie.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D15878714C184F700C2F50F /* cangjie_trie.plist */; };
+		5D15878D14C184F700C2F50F /* cangjie_trie.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D15878714C184F700C2F50F /* cangjie_trie.plist */; };
+		5D15878E14C184F700C2F50F /* cangjie_trie.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D15878714C184F700C2F50F /* cangjie_trie.plist */; };
+		5D15878F14C184F700C2F50F /* hanzi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D15878814C184F700C2F50F /* hanzi.plist */; };
+		5D15879014C184F700C2F50F /* hanzi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D15878814C184F700C2F50F /* hanzi.plist */; };
+		5D15879114C184F700C2F50F /* hanzi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D15878814C184F700C2F50F /* hanzi.plist */; };
 		5D4D5B2D14B0B3EE00CB5B21 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4D5B2C14B0B3EE00CB5B21 /* Cocoa.framework */; };
 		5D4D5B3714B0B3EE00CB5B21 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D5B3514B0B3EE00CB5B21 /* InfoPlist.strings */; };
 		5D4D5B3914B0B3EE00CB5B21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D5B3814B0B3EE00CB5B21 /* main.m */; };
@@ -46,17 +55,11 @@
 		5D8E500814B86B6500875378 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D8E500614B86B6500875378 /* InfoPlist.strings */; };
 		5D8E500A14B86B6500875378 /* AZCandidateTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 5D8E500914B86B6500875378 /* AZCandidateTests.h */; };
 		5D8E500C14B86B6500875378 /* AZCandidateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8E500B14B86B6500875378 /* AZCandidateTests.m */; };
-		5D92787F14B5EB90009C16E6 /* cangjie_keyname.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D92787E14B5EB90009C16E6 /* cangjie_keyname.plist */; };
-		5D92788014B5EB90009C16E6 /* cangjie_keyname.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D92787E14B5EB90009C16E6 /* cangjie_keyname.plist */; };
 		5DECB27314B3F9DC00CE1A27 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DECB27214B3F9DC00CE1A27 /* DDFileReader.m */; };
 		5DF0C85B14B3FB0300D6396C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4D5B6714B0B42300CB5B21 /* Foundation.framework */; };
 		5DF0C85E14B3FB0300D6396C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF0C85D14B3FB0300D6396C /* main.m */; };
 		5DF0C86214B3FB0300D6396C /* BuildCangJieTrie.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5DF0C86114B3FB0300D6396C /* BuildCangJieTrie.1 */; };
 		5DF0C86714B3FBC100D6396C /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DECB27214B3F9DC00CE1A27 /* DDFileReader.m */; };
-		5DF0C86A14B4118400D6396C /* cangjie_trie.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DF0C86814B4118400D6396C /* cangjie_trie.plist */; };
-		5DF0C86B14B4118400D6396C /* cangjie_trie.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DF0C86814B4118400D6396C /* cangjie_trie.plist */; };
-		5DF0C86C14B4118400D6396C /* hanzi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DF0C86914B4118400D6396C /* hanzi.plist */; };
-		5DF0C86D14B4118400D6396C /* hanzi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DF0C86914B4118400D6396C /* hanzi.plist */; };
 		5DF0C87314B4313C00D6396C /* InputMethodKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF0C87214B4313B00D6396C /* InputMethodKit.framework */; };
 		5DF0C87614B4340600D6396C /* CangJieClassic.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF0C87514B4340600D6396C /* CangJieClassic.m */; };
 		5DF0C87714B4340600D6396C /* CangJieClassic.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF0C87514B4340600D6396C /* CangJieClassic.m */; };
@@ -104,6 +107,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5D15878614C184F700C2F50F /* cangjie_keyname.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = cangjie_keyname.plist; path = data/cangjie_keyname.plist; sourceTree = "<group>"; };
+		5D15878714C184F700C2F50F /* cangjie_trie.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = cangjie_trie.plist; path = data/cangjie_trie.plist; sourceTree = "<group>"; };
+		5D15878814C184F700C2F50F /* hanzi.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = hanzi.plist; path = data/hanzi.plist; sourceTree = "<group>"; };
 		5D4D5B2814B0B3EE00CB5B21 /* CangJieX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CangJieX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4D5B2C14B0B3EE00CB5B21 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5D4D5B2F14B0B3EE00CB5B21 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -147,15 +153,12 @@
 		5D8E500714B86B6500875378 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5D8E500914B86B6500875378 /* AZCandidateTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AZCandidateTests.h; sourceTree = "<group>"; };
 		5D8E500B14B86B6500875378 /* AZCandidateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AZCandidateTests.m; sourceTree = "<group>"; };
-		5D92787E14B5EB90009C16E6 /* cangjie_keyname.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = cangjie_keyname.plist; sourceTree = "<group>"; };
 		5DECB27114B3F9DC00CE1A27 /* DDFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDFileReader.h; path = ../DDFileReader.h; sourceTree = "<group>"; };
 		5DECB27214B3F9DC00CE1A27 /* DDFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDFileReader.m; path = ../DDFileReader.m; sourceTree = "<group>"; };
 		5DF0C85914B3FB0300D6396C /* BuildCangJieTrie */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BuildCangJieTrie; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF0C85D14B3FB0300D6396C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5DF0C86014B3FB0300D6396C /* BuildCangJieTrie-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BuildCangJieTrie-Prefix.pch"; sourceTree = "<group>"; };
 		5DF0C86114B3FB0300D6396C /* BuildCangJieTrie.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = BuildCangJieTrie.1; sourceTree = "<group>"; };
-		5DF0C86814B4118400D6396C /* cangjie_trie.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = cangjie_trie.plist; sourceTree = "<group>"; };
-		5DF0C86914B4118400D6396C /* hanzi.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = hanzi.plist; sourceTree = "<group>"; };
 		5DF0C87214B4313B00D6396C /* InputMethodKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputMethodKit.framework; path = System/Library/Frameworks/InputMethodKit.framework; sourceTree = SDKROOT; };
 		5DF0C87414B4340600D6396C /* CangJieClassic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CangJieClassic.h; sourceTree = "<group>"; };
 		5DF0C87514B4340600D6396C /* CangJieClassic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CangJieClassic.m; sourceTree = "<group>"; };
@@ -217,6 +220,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D15879214C1850100C2F50F /* data */ = {
+			isa = PBXGroup;
+			children = (
+				5D15878614C184F700C2F50F /* cangjie_keyname.plist */,
+				5D15878714C184F700C2F50F /* cangjie_trie.plist */,
+				5D15878814C184F700C2F50F /* hanzi.plist */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
 		5D4D5B1D14B0B3EE00CB5B21 = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +240,7 @@
 				5D8E4FE714B86B6500875378 /* AZCandidate */,
 				5D8E500314B86B6500875378 /* AZCandidateTests */,
 				5D4D5B2B14B0B3EE00CB5B21 /* Frameworks */,
+				5D15879214C1850100C2F50F /* data */,
 				5D4D5B2914B0B3EE00CB5B21 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -282,9 +296,6 @@
 		5D4D5B3314B0B3EE00CB5B21 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5D92787E14B5EB90009C16E6 /* cangjie_keyname.plist */,
-				5DF0C86814B4118400D6396C /* cangjie_trie.plist */,
-				5DF0C86914B4118400D6396C /* hanzi.plist */,
 				5D4D5B7B14B152F400CB5B21 /* Bopomofo.tiff */,
 				5D4D5B7C14B152F400CB5B21 /* BopomofoSelected.tiff */,
 				5D4D5B7D14B152F500CB5B21 /* favicon.ico */,
@@ -548,9 +559,9 @@
 				5D4D5B8714B152F500CB5B21 /* favicon.png in Resources */,
 				5D4D5B8914B152F500CB5B21 /* favicon.tiff in Resources */,
 				5D4D5B8B14B152F500CB5B21 /* Lettuce.icns in Resources */,
-				5DF0C86A14B4118400D6396C /* cangjie_trie.plist in Resources */,
-				5DF0C86C14B4118400D6396C /* hanzi.plist in Resources */,
-				5D92787F14B5EB90009C16E6 /* cangjie_keyname.plist in Resources */,
+				5D15878914C184F700C2F50F /* cangjie_keyname.plist in Resources */,
+				5D15878C14C184F700C2F50F /* cangjie_trie.plist in Resources */,
+				5D15878F14C184F700C2F50F /* hanzi.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,9 +576,9 @@
 				5D4D5B8814B152F500CB5B21 /* favicon.png in Resources */,
 				5D4D5B8A14B152F500CB5B21 /* favicon.tiff in Resources */,
 				5D4D5B8C14B152F500CB5B21 /* Lettuce.icns in Resources */,
-				5DF0C86B14B4118400D6396C /* cangjie_trie.plist in Resources */,
-				5DF0C86D14B4118400D6396C /* hanzi.plist in Resources */,
-				5D92788014B5EB90009C16E6 /* cangjie_keyname.plist in Resources */,
+				5D15878A14C184F700C2F50F /* cangjie_keyname.plist in Resources */,
+				5D15878D14C184F700C2F50F /* cangjie_trie.plist in Resources */,
+				5D15879014C184F700C2F50F /* hanzi.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +589,9 @@
 				5D8E4FEC14B86B6500875378 /* InfoPlist.strings in Resources */,
 				5D8E4FF214B86B6500875378 /* Credits.rtf in Resources */,
 				5D8E4FF814B86B6500875378 /* MainMenu.xib in Resources */,
+				5D15878B14C184F700C2F50F /* cangjie_keyname.plist in Resources */,
+				5D15878E14C184F700C2F50F /* cangjie_trie.plist in Resources */,
+				5D15879114C184F700C2F50F /* hanzi.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

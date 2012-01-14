@@ -12,7 +12,7 @@
 
 -(void) awakeFromNib {
     
-    //[self setBackgroundColor:[NSColor clearColor]];
+    [self setBackgroundColor:[NSColor clearColor]];
     [self setAlphaValue:0.99];
     [self setOpaque:NO];
     
@@ -24,11 +24,13 @@
                      defer:(BOOL)flag
 {
     self = [super initWithContentRect:contentRect
-                            styleMask:NSBorderlessWindowMask
+                            styleMask:aStyle
                               backing:bufferingType 
                                 defer:flag];
     return self;
 }
+
+
 /*
 -(void) displayIfNeeded {
     NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect: [[self contentView] bounds]

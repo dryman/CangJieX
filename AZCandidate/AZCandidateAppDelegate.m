@@ -9,7 +9,10 @@
 #import "AZCandidateAppDelegate.h"
 
 @implementation AZCandidateAppDelegate
+@synthesize table_view;
 @synthesize window;
+@synthesize search_field;
+@synthesize original_key;
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -24,13 +27,43 @@
     [window setContentSize:NSMakeSize(400, 680)];
      */
     // Insert code here to initialize your application
+    NSString* resource_path=[[NSBundle mainBundle] resourcePath];
+    trie = [[NSDictionary alloc] initWithContentsOfFile:[resource_path stringByAppendingPathComponent:@"cangjie_trie.plist"]];
+    keyname = [[NSDictionary alloc] initWithContentsOfFile:[resource_path stringByAppendingPathComponent:@"cangjie_keyname.plist"]];
+    _words = [NSMutableArray new];
+    
     NSLog(@"finish launching");
-    //NSSize size = [[[[window contentView] subviews] objectAtIndex:0] contentSize];
-    //NSLog(@"size of nstable is %@",size);
 }
 - (void)dealloc {
+    [_words release];
+    [trie release];
+    [keyname release];
     [window release];
     [super dealloc];
 }
+- (NSInteger) numberOfRowsInTableView:(NSTableView *)tableView{
+    NSInteger count=0;
+    count += [_words count];
+    return count;
+}
+- (NSView*) tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    NSTextField *textView = [tableView makeViewWithIdentifier:@"MainCell" owner:self];
+    if (textView == nil) {
+        textView = [[[NSTextField alloc] initWithFrame:NSZeroRect] autorelease];
+        textView.identifier = @"MainCell";
+    }
+    textView.stringValue = [_words objectAtIndex:row];
+    return textView;
+}
 
+- (IBAction)doSearch:(id)sender {
+    self.original_key = [sender stringValue];
+    [_words removeAllObjects];
+    [_words addObjectsFromArray:[[trie objectForKey:original_key] objectForKey:@"exact"]];
+    [_words addObjectsFromArray:[[trie objectForKey:original_key] objectForKey:@"identical"]];
+    [_words addObjectsFromArray:[[trie objectForKey:original_key] objectForKey:@"further"]];
+
+
+    [table_view reloadData];
+}
 @end

@@ -78,10 +78,14 @@ int main (int argc, const char * argv[])
           objectForKey:@"exact"] 
          addObject:zh];
         
+        if ([exact_def isEqualToString:@"hapi"])
+            NSLog(@"debug");
+        
+        NSUInteger compostion_length = [exact_def length];
         // rule 2: length = 1, continue
-        if ([exact_def length] ==1) continue;
+        if (compostion_length ==1) continue;
         // rule 3: for idx = 2 to lenth-1, add to further
-        for (NSUInteger idx = 2; idx < [exact_def length]-1; ++idx){
+        for (NSUInteger idx = 2; idx < compostion_length; idx++){
             NSString *further_def = [exact_def substringToIndex:idx];
             NSDictionary *trie_obj = [trie objectForKey:further_def];
             if (!trie_obj){

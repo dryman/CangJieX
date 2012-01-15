@@ -11,7 +11,6 @@
 @implementation AZCandidateAppDelegate
 @synthesize table_view;
 @synthesize window;
-@synthesize search_field;
 @synthesize original_key;
 
 
@@ -31,6 +30,12 @@
     trie = [[NSDictionary alloc] initWithContentsOfFile:[resource_path stringByAppendingPathComponent:@"cangjie_trie.plist"]];
     keyname = [[NSDictionary alloc] initWithContentsOfFile:[resource_path stringByAppendingPathComponent:@"cangjie_keyname.plist"]];
     _words = [NSMutableArray new];
+    self.original_key = @"hap";
+    [_words addObjectsFromArray:[[trie objectForKey:original_key] objectForKey:@"exact"]];
+    [_words addObjectsFromArray:[[trie objectForKey:original_key] objectForKey:@"identical"]];
+    [_words addObjectsFromArray:[[trie objectForKey:original_key] objectForKey:@"further"]];
+    [table_view reloadData];
+    
     
     NSLog(@"finish launching");
 }
@@ -56,14 +61,4 @@
     return textView;
 }
 
-- (IBAction)doSearch:(id)sender {
-    self.original_key = [sender stringValue];
-    [_words removeAllObjects];
-    [_words addObjectsFromArray:[[trie objectForKey:original_key] objectForKey:@"exact"]];
-    [_words addObjectsFromArray:[[trie objectForKey:original_key] objectForKey:@"identical"]];
-    [_words addObjectsFromArray:[[trie objectForKey:original_key] objectForKey:@"further"]];
-
-
-    [table_view reloadData];
-}
 @end

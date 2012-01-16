@@ -10,10 +10,9 @@
 #import "AZCandidateWindow.h"
 
 @interface AZCandidateAppDelegate : NSObject <NSApplicationDelegate, NSTableViewDataSource, NSTableViewDelegate>  {
-    // AZCandidateWindow *window;
+    AZCandidateWindow *window;
     // May change NSWindow to AZCandidateWindow, then no need of NSWindow in MainMenu in xib file
     //NSTableView *table_view;
-    NSWindow *window;
     NSMutableArray *_words;
     NSDictionary *trie;
     NSDictionary *keyname;
@@ -21,7 +20,6 @@
     NSString *original_key;
 }
 //@property (assign) IBOutlet NSTableView *table_view;
-@property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSTableView *table_view;
 @property (copy) NSString *original_key;
 

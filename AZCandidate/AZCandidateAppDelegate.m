@@ -10,13 +10,12 @@
 
 @implementation AZCandidateAppDelegate
 @synthesize table_view;
-@synthesize window;
 @synthesize original_key;
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    /*
+    
     window = [[AZCandidateWindow alloc] initWithContentRect:NSMakeRect(100, 300, 0, 0) 
                                                   styleMask:NSBorderlessWindowMask 
                                                     backing:NSBackingStoreBuffered 
@@ -24,7 +23,7 @@
     [window makeKeyAndOrderFront:NSApp];
     [window setContentView:table_view];
     [window setContentSize:NSMakeSize(400, 680)];
-     */
+    
     // Insert code here to initialize your application
     NSString* resource_path=[[NSBundle mainBundle] resourcePath];
     trie = [[NSDictionary alloc] initWithContentsOfFile:[resource_path stringByAppendingPathComponent:@"cangjie_trie.plist"]];

@@ -8,6 +8,14 @@
 
 #import <AppKit/AppKit.h>
 
-@interface AZCandidateWindow : NSWindow
+@interface AZCandidateWindow : NSWindow {
+    NSView* _view;
+    NSRect _viewFrame;
+    NSPoint _origin;
+    CGFloat xMargin; // should be zero
+    CGFloat yMargin;
+}
+
+-(AZCandidateWindow*) initWithView:(NSView*) view andOrigin:(NSPoint)point;
 
 @end
